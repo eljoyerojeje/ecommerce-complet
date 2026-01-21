@@ -268,7 +268,6 @@ function initModals() {
 // ============================================
 
 // Rendre les fonctions accessibles globalement
-window.addToCart = addToCart;
 window.updateQuantity = updateQuantity;
 window.removeFromCart = removeFromCart;
 window.updateCart = updateCart;
