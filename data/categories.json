@@ -1,0 +1,39 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Électronique",
+      "slug": "electronique",
+      "icon": "fas fa-laptop",
+      "subcategories": ["Smartphones", "Ordinateurs", "Tablettes", "Audio"]
+    },
+    {
+      "id": 2,
+      "name": "Mode",
+      "slug": "mode",
+      "icon": "fas fa-tshirt",
+      "subcategories": ["Vêtements", "Chaussures", "Accessoires"]
+    },
+    {
+      "id": 3,
+      "name": "Maison",
+      "slug": "maison",
+      "icon": "fas fa-home",
+      "subcategories": ["Meubles", "Décoration", "Cuisine", "Jardin"]
+    },
+    {
+      "id": 4,
+      "name": "Sport & Loisirs",
+      "slug": "sport-loisirs",
+      "icon": "fas fa-futbol",
+      "subcategories": ["Équipement sportif", "Jeux vidéo", "Livres", "Instruments"]
+    },
+    {
+      "id": 5,
+      "name": "Beauté",
+      "slug": "beaute",
+      "icon": "fas fa-spa",
+      "subcategories": ["Cosmétiques", "Parfums", "Soins cheveux", "Soins peau"]
+    }
+  ]
+}
