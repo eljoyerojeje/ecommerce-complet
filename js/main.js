@@ -193,7 +193,7 @@ function searchProducts(query) {
 
 document.addEventListener('DOMContentLoaded', async function() {
     // Initialiser le panier
-    updateCart();
+    updateCart
     
     // Charger les produits sur la page d'accueil
     if (document.getElementById('featured-products')) {
