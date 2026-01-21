@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue Produits | E-Commerce</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>E-Shop<span>.</span></h1>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form id="search-form">
+                        <input type="text" id="search-input" placeholder="Rechercher un produit...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <!-- Wishlist -->
+                    <a href="wishlist.html" class="action-btn">
+                        <i class="far fa-heart"></i>
+                        <span class="action-count wishlist-count">0</span>
+                    </a>
+                    
+                    <!-- Cart -->
+                    <div class="cart-dropdown">
+                        <a href="cart.html" class="action-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="action-count cart-count">0</span>
+                        </a>
+                        <div class="cart-dropdown-content" id="cart-dropdown-content">
+                            <!-- Panier dynamique -->
+                        </div>
+                    </div>
+                    
+                    <!-- User Account -->
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <i class="far fa-user"></i>
+                        </button>
+                        <div class="user-dropdown-content">
+                            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+                            <a href="register.html"><i class="fas fa-user-plus"></i> Inscription</a>
+                            <a href="profile.html"><i class="fas fa-user-circle"></i> Mon compte</a>
+                            <a href="orders.html"><i class="fas fa-box"></i> Mes commandes</a>
+                            <hr>
+                            <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="has-dropdown">
+                        <a href="products.html">Boutique <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-col">
+                                        <h4>Catégories</h4>
+                                        <ul>
+                                            <li><a href="products.html?category=electronique">Électronique</a></li>
+                                            <li><a href="products.html?category=mode">Mode & Vêtements</a></li>
+                                            <li><a href="products.html?category=maison">Maison & Jardin</a></li>
+                                            <li><a href="products.html?category=sport">Sport & Loisirs</a></li>
+                                            <li><a href="products.html?category=beaute">Beauté & Santé</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-col">
+                                        <h4>Collections</h4>
+                                        <ul>
+                                            <li><a href="products.html?collection=nouveautes">Nouveautés</a></li>
+                                            <li><a href="products.html?collection=best-sellers">Meilleures ventes</a></li>
+                                            <li><a href="products.html?collection=promotions">Promotions</a></li>
+                                            <li><a href="products.html?collection=exclusivites">Exclusivités</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-col">
+                                        <h4>Marques Populaires</h4>
+                                        <ul>
+                                            <li><a href="products.html?brand=apple">Apple</a></li>
+                                            <li><a href="products.html?brand=samsung">Samsung</a></li>
+                                            <li><a href="products.html?brand=nike">Nike</a></li>
+                                            <li><a href="products.html?brand=sony">Sony</a></li>
+                                            <li><a href="products.html?brand=canon">Canon</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-col promo">
+                                        <h4>Promotion spéciale</h4>
+                                        <p>Jusqu'à -50% sur la collection d'été</p>
+                                        <a href="products.html?promo=ete" class="btn btn-outline">Voir les offres</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Catalogue produits</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="products-page">
+                <!-- Page Title -->
+                <div class="page-header">
+                    <h1>Catalogue Produits</h1>
+                    <p>Trouvez le produit parfait parmi notre sélection</p>
+                </div>
+
+                <div class="products-layout">
+                    <!-- Sidebar Filters -->
+                    <aside class="products-sidebar">
+                        <!-- Categories Filter -->
+                        <div class="filter-section">
+                            <h3><i class="fas fa-list"></i> Catégories</h3>
+                            <div class="filter-content">
+                                <div class="category-list">
+                                    <label class="category-item">
+                                        <input type="checkbox" value="all" checked>
+                                        <span>Toutes catégories</span>
+                                        <span class="count">(150)</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" value="smartphones">
+                                        <span>Smartphones</span>
+                                        <span class="count">(24)</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" value="ordinateurs">
+                                        <span>Ordinateurs</span>
+                                        <span class="count">(18)</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" value="tablettes">
+                                        <span>Tablettes</span>
+                                        <span class="count">(12)</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" value="audio">
+                                        <span>Audio</span>
+                                        <span class="count">(32)</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" value="vetements">
+                                        <span>Vêtements</span>
+                                        <span class="count">(45)</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" value="chaussures">
+                                        <span>Chaussures</span>
+                                        <span class="count">(28)</span>
+                                    </label>
+                                    <label class="category-item">
+                                        <input type="checkbox" value="maison">
+                                        <span>Maison</span>
+                                        <span class="count">(36)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Price Filter -->
+                        <div class="filter-section">
+                            <h3><i class="fas fa-euro-sign"></i> Prix</h3>
+                            <div class="filter-content">
+                                <div class="price-filter">
+                                    <div class="price-inputs">
+                                        <input type="number" id="price-min" placeholder="Min" value="0">
+                                        <span>-</span>
+                                        <input type="number" id="price-max" placeholder="Max" value="5000">
+                                    </div>
+                                    <div class="price-slider">
+                                        <input type="range" min="0" max="5000" value="0" class="range-min">
+                                        <input type="range" min="0" max="5000" value="5000" class="range-max">
+                                    </div>
+                                    <button id="apply-price" class="btn btn-small">Appliquer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brand Filter -->
+                        <div class="filter-section">
+                            <h3><i class="fas fa-tag"></i> Marques</h3>
+                            <div class="filter-content">
+                                <div class="brand-filter">
+                                    <label class="brand-item">
+                                        <input type="checkbox" value="apple">
+                                        <span>Apple</span>
+                                        <span class="count">(15)</span>
+                                    </label>
+                                    <label class="brand-item">
+                                        <input type="checkbox" value="samsung">
+                                        <span>Samsung</span>
+                                        <span class="count">(12)</span>
+                                    </label>
+                                    <label class="brand-item">
+                                        <input type="checkbox" value="sony">
+                                        <span>Sony</span>
+                                        <span class="count">(8)</span>
+                                    </label>
+                                    <label class="brand-item">
+                                        <input type="checkbox" value="nike">
+                                        <span>Nike</span>
+                                        <span class="count">(18)</span>
+                                    </label>
+                                    <label class="brand-item">
+                                        <input type="checkbox" value="canon">
+                                        <span>Canon</span>
+                                        <span class="count">(6)</span>
+                                    </label>
+                                    <label class="brand-item">
+                                        <input type="checkbox" value="dell">
+                                        <span>Dell</span>
+                                        <span class="count">(7)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rating Filter -->
+                        <div class="filter-section">
+                            <h3><i class="fas fa-star"></i> Note</h3>
+                            <div class="filter-content">
+                                <div class="rating-filter">
+                                    <label class="rating-item">
+                                        <input type="radio" name="rating" value="5">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>& plus</span>
+                                        </div>
+                                    </label>
+                                    <label class="rating-item">
+                                        <input type="radio" name="rating" value="4">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>& plus</span>
+                                        </div>
+                                    </label>
+                                    <label class="rating-item">
+                                        <input type="radio" name="rating" value="3">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>& plus</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Filters -->
+                        <div class="filter-section">
+                            <h3><i class="fas fa-bolt"></i> Options</h3>
+                            <div class="filter-content">
+                                <label class="filter-option">
+                                    <input type="checkbox" id="in-stock">
+                                    <span>En stock seulement</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" id="on-sale">
+                                    <span>En promotion</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" id="free-shipping">
+                                    <span>Livraison gratuite</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Clear Filters -->
+                        <button id="clear-filters" class="btn btn-outline btn-block">
+                            <i class="fas fa-times"></i> Effacer tous les filtres
+                        </button>
+                    </aside>
+
+                    <!-- Main Products Area -->
+                    <div class="products-main">
+                        <!-- Products Header -->
+                        <div class="products-header">
+                            <div class="products-count">
+                                <p><strong>150</strong> produits trouvés</p>
+                            </div>
+                            <div class="products-sort">
+                                <label for="sort-by">Trier par :</label>
+                                <select id="sort-by">
+                                    <option value="featured">Recommandés</option>
+                                    <option value="popularity">Popularité</option>
+                                    <option value="rating">Meilleures notes</option>
+                                    <option value="newest">Nouveautés</option>
+                                    <option value="price-low">Prix croissant</option>
+                                    <option value="price-high">Prix décroissant</option>
+                                </select>
+                            </div>
+                            <div class="view-options">
+                                <button class="view-btn active" data-view="grid">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="view-btn" data-view="list">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Products Grid -->
+                        <div class="products-grid" id="products-grid">
+                            <!-- Les produits seront chargés dynamiquement ici -->
+                            <div class="loading-products">
+                                <div class="spinner"></div>
+                                <p>Chargement des produits...</p>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="page-btn disabled">
+                                <i class="fas fa-chevron-left"></i> Précédent
+                            </button>
+                            <div class="page-numbers">
+                                <button class="page-number active">1</button>
+                                <button class="page-number">2</button>
+                                <button class="page-number">3</button>
+                                <span>...</span>
+                                <button class="page-number">10</button>
+                            </div>
+                            <button class="page-btn">
+                                Suivant <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- No Products Message (hidden by default) -->
+                        <div class="no-products-message" style="display: none;">
+                            <i class="fas fa-search fa-3x"></i>
+                            <h3>Aucun produit trouvé</h3>
+                            <p>Essayez de modifier vos critères de recherche ou de filtres</p>
+                            <button id="reset-search" class="btn btn-primary">
+                                Réinitialiser la recherche
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Restez informés</h3>
+                    <p>Inscrivez-vous à notre newsletter pour recevoir nos offres exclusives</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn btn-primary">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="logo">
+                        <h2>E-Shop<span>.</span></h2>
+                    </div>
+                    <p class="footer-description">
+                        Votre boutique en ligne préférée pour tous vos achats. Qualité, prix et service garantis.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="products.html">Boutique</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div class="footer-col">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="products.html?category=electronique">Électronique</a></li>
+                        <li><a href="products.html?category=mode">Mode</a></li>
+                        <li><a href="products.html?category=maison">Maison</a></li>
+                        <li><a href="products.html?category=sport">Sport</a></li>
+                        <li><a href="products.html?category=beaute">Beauté</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Rue du Commerce, 75000 Paris</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>01 23 45 67 89</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@eshop.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 E-Shop. Tous droits réservés.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    
+    <script>
+        // Script spécifique à la page produits
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialisation des filtres
+            initFilters();
+            
+            // Gestion du changement de vue (grid/list)
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const view = this.dataset.view;
+                    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const grid = document.getElementById('products-grid');
+                    grid.className = `products-grid ${view}-view`;
+                });
+            });
+            
+            // Gestion des filtres
+            function initFilters() {
+                const clearBtn = document.getElementById('clear-filters');
+                if (clearBtn) {
+                    clearBtn.addEventListener('click', function() {
+                        document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+                        document.querySelectorAll('input[type="radio"]').forEach(rb => rb.checked = false);
+                        document.getElementById('price-min').value = 0;
+                        document.getElementById('price-max').value = 5000;
+                        
+                        // Réinitialiser l'affichage des produits
+                        if (window.filterProducts) {
+                            const filtered = window.filterProducts();
+                            window.displayProducts(filtered, 'products-grid');
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
