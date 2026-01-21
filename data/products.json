@@ -1,0 +1,217 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 15 Pro",
+      "category": "Smartphones",
+      "price": 1199.99,
+      "discount": 10,
+      "image": "/images/products/iphone15.jpg",
+      "description": "Dernier smartphone Apple avec écran Dynamic Island, processeur A17 Pro et appareil photo 48MP.",
+      "rating": 4.8,
+      "reviewCount": 128,
+      "featured": true,
+      "stock": 50,
+      "specs": {
+        "écran": "6.7 pouces Super Retina XDR",
+        "processeur": "A17 Pro",
+        "mémoire": "256 Go",
+        "camera": "Triple 48MP + 12MP + 12MP",
+        "batterie": "4352 mAh"
+      },
+      "dateAdded": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "name": "MacBook Air M2",
+      "category": "Ordinateurs",
+      "price": 1299.99,
+      "discount": 15,
+      "image": "/images/products/macbook-air.jpg",
+      "description": "Ordinateur portable ultra-fin avec puce Apple M2, écran Retina 13.6 pouces et autonomie jusqu'à 18h.",
+      "rating": 4.9,
+      "reviewCount": 89,
+      "featured": true,
+      "stock": 30,
+      "specs": {
+        "écran": "13.6 pouces Liquid Retina",
+        "processeur": "Apple M2",
+        "ram": "8 Go",
+        "stockage": "256 Go SSD",
+        "autonomie": "18 heures"
+      },
+      "dateAdded": "2024-01-10"
+    },
+    {
+      "id": 3,
+      "name": "T-Shirt Blanc Basique",
+      "category": "Vêtements",
+      "price": 24.99,
+      "discount": 20,
+      "image": "/images/products/tshirt-blanc.jpg",
+      "description": "T-shirt en coton 100% de haute qualité, coupe régulière, confortable et respirant.",
+      "rating": 4.5,
+      "reviewCount": 215,
+      "featured": true,
+      "stock": 200,
+      "specs": {
+        "matière": "100% Coton",
+        "entretien": "Lavage machine 30°",
+        "couleur": "Blanc",
+        "tailles": "S, M, L, XL"
+      },
+      "dateAdded": "2024-01-05"
+    },
+    {
+      "id": 4,
+      "name": "AirPods Pro (2ème génération)",
+      "category": "Audio",
+      "price": 279.99,
+      "discount": 0,
+      "image": "/images/products/airpods-pro.jpg",
+      "description": "Écouteurs sans fil avec réduction de bruit active et annulation de bruit adaptative.",
+      "rating": 4.7,
+      "reviewCount": 342,
+      "featured": true,
+      "stock": 75,
+      "specs": {
+        "autonomie": "6 heures (30h avec étui)",
+        "connectivité": "Bluetooth 5.3",
+        "résistance": "IPX4",
+        "poids": "5.3g par écouteur"
+      },
+      "dateAdded": "2024-01-20"
+    },
+    {
+      "id": 5,
+      "name": "Samsung Galaxy Watch 6",
+      "category": "Montres connectées",
+      "price": 349.99,
+      "discount": 12,
+      "image": "/images/products/galaxy-watch.jpg",
+      "description": "Montre connectée avec écran Super AMOLED, suivi santé avancé et compatibilité Android/iOS.",
+      "rating": 4.6,
+      "reviewCount": 167,
+      "featured": false,
+      "stock": 45,
+      "specs": {
+        "écran": "1.5 pouces Super AMOLED",
+        "autonomie": "40 heures",
+        "résistance": "5ATM + IP68",
+        "capteurs": "Fréquence cardiaque, SpO2, ECG"
+      },
+      "dateAdded": "2024-01-12"
+    },
+    {
+      "id": 6,
+      "name": "Console PlayStation 5",
+      "category": "Jeux vidéo",
+      "price": 499.99,
+      "discount": 5,
+      "image": "/images/products/ps5.jpg",
+      "description": "Console de jeu nouvelle génération avec SSD ultra-rapide et ray tracing.",
+      "rating": 4.9,
+      "reviewCount": 421,
+      "featured": true,
+      "stock": 25,
+      "specs": {
+        "processeur": "AMD Zen 2 8 cœurs",
+        "gpu": "AMD RDNA 2",
+        "mémoire": "16 Go GDDR6",
+        "stockage": "825 Go SSD"
+      },
+      "dateAdded": "2024-01-08"
+    },
+    {
+      "id": 7,
+      "name": "Canon EOS R6 Mark II",
+      "category": "Photo",
+      "price": 2499.99,
+      "discount": 8,
+      "image": "/images/products/canon-eos.jpg",
+      "description": "Appareil photo hybride 24MP, vidéo 4K 60p et stabilisation 8 stops.",
+      "rating": 4.8,
+      "reviewCount": 78,
+      "featured": false,
+      "stock": 15,
+      "specs": {
+        "capteur": "24.2 MP full frame",
+        "vidéo": "4K 60p",
+        "stabilisation": "IBIS 8 stops",
+        "rafale": "40 imgs/s"
+      },
+      "dateAdded": "2024-01-18"
+    },
+    {
+      "id": 8,
+      "name": "Tablette iPad Air",
+      "category": "Tablettes",
+      "price": 749.99,
+      "discount": 10,
+      "image": "/images/products/ipad-air.jpg",
+      "description": "Tablette légère et puissante avec écran Liquid Retina et puce M1.",
+      "rating": 4.7,
+      "reviewCount": 189,
+      "featured": true,
+      "stock": 40,
+      "specs": {
+        "écran": "10.9 pouces Liquid Retina",
+        "processeur": "Apple M1",
+        "stockage": "64 Go",
+        "compatible": "Apple Pencil 2"
+      },
+      "dateAdded": "2024-01-22"
+    },
+    {
+      "id": 9,
+      "name": "Casque Sony WH-1000XM5",
+      "category": "Audio",
+      "price": 399.99,
+      "discount": 15,
+      "image": "/images/products/sony-headphones.jpg",
+      "description": "Casque sans fil avec réduction de bruit exceptionnelle et qualité audio Hi-Res.",
+      "rating": 4.8,
+      "reviewCount": 256,
+      "featured": false,
+      "stock": 60,
+      "specs": {
+        "autonomie": "30 heures",
+        "réduction bruit": "ANC avancée",
+        "poids": "250g",
+        "connectivité": "Bluetooth 5.2"
+      },
+      "dateAdded": "2024-01-14"
+    },
+    {
+      "id": 10,
+      "name": "Nike Air Max 270",
+      "category": "Chaussures",
+      "price": 149.99,
+      "discount": 25,
+      "image": "/images/products/nike-airmax.jpg",
+      "description": "Chaussures de sport avec amorti Air Max visible et design moderne.",
+      "rating": 4.6,
+      "reviewCount": 312,
+      "featured": true,
+      "stock": 120,
+      "specs": {
+        "type": "Running",
+        "amorti": "Air Max 270",
+        "matière": "Textile et synthétique",
+        "pointures": "38 à 47"
+      },
+      "dateAdded": "2024-01-03"
+    }
+  ],
+  "categories": [
+    "Smartphones",
+    "Ordinateurs",
+    "Vêtements",
+    "Audio",
+    "Montres connectées",
+    "Jeux vidéo",
+    "Photo",
+    "Tablettes",
+    "Chaussures"
+  ]
+}
