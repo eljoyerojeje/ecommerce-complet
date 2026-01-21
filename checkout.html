@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement | E-Commerce</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>E-Shop<span>.</span></h1>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form id="search-form">
+                        <input type="text" id="search-input" placeholder="Rechercher un produit...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <!-- Wishlist -->
+                    <a href="wishlist.html" class="action-btn">
+                        <i class="far fa-heart"></i>
+                        <span class="action-count wishlist-count">0</span>
+                    </a>
+                    
+                    <!-- Cart -->
+                    <div class="cart-dropdown">
+                        <a href="cart.html" class="action-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="action-count cart-count">0</span>
+                        </a>
+                        <div class="cart-dropdown-content" id="cart-dropdown-content">
+                            <!-- Panier dynamique -->
+                        </div>
+                    </div>
+                    
+                    <!-- User Account -->
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <i class="far fa-user"></i>
+                        </button>
+                        <div class="user-dropdown-content">
+                            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+                            <a href="register.html"><i class="fas fa-user-plus"></i> Inscription</a>
+                            <a href="profile.html"><i class="fas fa-user-circle"></i> Mon compte</a>
+                            <a href="orders.html"><i class="fas fa-box"></i> Mes commandes</a>
+                            <hr>
+                            <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="has-dropdown">
+                        <a href="products.html">Boutique <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-col">
+                                        <h4>Catégories</h4>
+                                        <ul>
+                                            <li><a href="products.html?category=electronique">Électronique</a></li>
+                                            <li><a href="products.html?category=mode">Mode & Vêtements</a></li>
+                                            <li><a href="products.html?category=maison">Maison & Jardin</a></li>
+                                            <li><a href="products.html?category=sport">Sport & Loisirs</a></li>
+                                            <li><a href="products.html?category=beaute">Beauté & Santé</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-col">
+                                        <h4>Collections</h4>
+                                        <ul>
+                                            <li><a href="products.html?collection=nouveautes">Nouveautés</a></li>
+                                            <li><a href="products.html?collection=best-sellers">Meilleures ventes</a></li>
+                                            <li><a href="products.html?collection=promotions">Promotions</a></li>
+                                            <li><a href="products.html?collection=exclusivites">Exclusivités</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-col">
+                                        <h4>Marques Populaires</h4>
+                                        <ul>
+                                            <li><a href="products.html?brand=apple">Apple</a></li>
+                                            <li><a href="products.html?brand=samsung">Samsung</a></li>
+                                            <li><a href="products.html?brand=nike">Nike</a></li>
+                                            <li><a href="products.html?brand=sony">Sony</a></li>
+                                            <li><a href="products.html?brand=canon">Canon</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-col promo">
+                                        <h4>Promotion spéciale</h4>
+                                        <p>Jusqu'à -50% sur la collection d'été</p>
+                                        <a href="products.html?promo=ete" class="btn btn-outline">Voir les offres</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="cart.html">Panier</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Paiement</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="checkout-page">
+                <!-- Progress Steps -->
+                <div class="checkout-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Panier</div>
+                    </div>
+                    <div class="step active">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Information</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Livraison</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Paiement</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-label">Confirmation</div>
+                    </div>
+                </div>
+
+                <h1 class="page-title">Finaliser votre commande</h1>
+                
+                <div class="checkout-content">
+                    <!-- Left Column: Forms -->
+                    <div class="checkout-form-container">
+                        <!-- Login/Register -->
+                        <div class="checkout-section" id="auth-section">
+                            <h2><i class="fas fa-user"></i> Compte client</h2>
+                            <div class="auth-options">
+                                <div class="auth-option">
+                                    <input type="radio" name="auth" id="guest-checkout" checked>
+                                    <label for="guest-checkout">
+                                        <h3>Commander en tant qu'invité</h3>
+                                        <p>Pas besoin de créer un compte</p>
+                                    </label>
+                                </div>
+                                <div class="auth-option">
+                                    <input type="radio" name="auth" id="login-checkout">
+                                    <label for="login-checkout">
+                                        <h3>J'ai déjà un compte</h3>
+                                        <p>Connectez-vous pour accélérer le processus</p>
+                                    </label>
+                                </div>
+                                <div class="auth-option">
+                                    <input type="radio" name="auth" id="register-checkout">
+                                    <label for="register-checkout">
+                                        <h3>Créer un compte</h3>
+                                        <p>Enregistrez-vous pour suivre vos commandes</p>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Login Form (hidden by default) -->
+                            <div class="login-form" id="login-form" style="display: none;">
+                                <div class="form-group">
+                                    <label for="login-email">Email</label>
+                                    <input type="email" id="login-email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="login-password">Mot de passe</label>
+                                    <input type="password" id="login-password" required>
+                                </div>
+                                <button type="button" class="btn btn-primary">Se connecter</button>
+                            </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="checkout-section">
+                            <h2><i class="fas fa-envelope"></i> Informations de contact</h2>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="email">Adresse email *</label>
+                                    <input type="email" id="email" required>
+                                    <small>Nous vous enverrons un email de confirmation</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Téléphone *</label>
+                                    <input type="tel" id="phone" required>
+                                    <small>Pour la livraison et les notifications</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="checkout-section">
+                            <h2><i class="fas fa-truck"></i> Adresse de livraison</h2>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="first-name">Prénom *</label>
+                                    <input type="text" id="first-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Nom *</label>
+                                    <input type="text" id="last-name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Adresse *</label>
+                                <input type="text" id="address" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address2">Complément d'adresse</label>
+                                <input type="text" id="address2">
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="city">Ville *</label>
+                                    <input type="text" id="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">Code postal *</label>
+                                    <input type="text" id="zip" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">Pays *</label>
+                                <select id="country" required>
+                                    <option value="">Sélectionnez un pays</option>
+                                    <option value="FR" selected>France</option>
+                                    <option value="BE">Belgique</option>
+                                    <option value="CH">Suisse</option>
+                                    <option value="LU">Luxembourg</option>
+                                    <option value="CA">Canada</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input type="checkbox" id="save-address">
+                                <label for="save-address">Enregistrer cette adresse pour mes prochaines commandes</label>
+                            </div>
+                        </div>
+
+                        <!-- Billing Address -->
+                        <div class="checkout-section">
+                            <h2><i class="fas fa-credit-card"></i> Adresse de facturation</h2>
+                            <div class="form-check">
+                                <input type="checkbox" id="same-as-shipping" checked>
+                                <label for="same-as-shipping">Utiliser la même adresse que la livraison</label>
+                            </div>
+                            
+                            <div id="billing-address-form" style="display: none;">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="billing-first-name">Prénom *</label>
+                                        <input type="text" id="billing-first-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="billing-last-name">Nom *</label>
+                                        <input type="text" id="billing-last-name">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="billing-address">Adresse *</label>
+                                    <input type="text" id="billing-address">
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="billing-city">Ville *</label>
+                                        <input type="text" id="billing-city">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="billing-zip">Code postal *</label>
+                                        <input type="text" id="billing-zip">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="billing-country">Pays *</label>
+                                    <select id="billing-country">
+                                        <option value="">Sélectionnez un pays</option>
+                                        <option value="FR">France</option>
+                                        <option value="BE">Belgique</option>
+                                        <option value="CH">Suisse</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Method -->
+                        <div class="checkout-section">
+                            <h2><i class="fas fa-shipping-fast"></i> Méthode de livraison</h2>
+                            <div class="shipping-methods">
+                                <div class="shipping-method">
+                                    <input type="radio" name="shipping" id="shipping-standard" checked>
+                                    <label for="shipping-standard">
+                                        <div class="shipping-method-info">
+                                            <h3>Livraison standard</h3>
+                                            <p>5-7 jours ouvrés</p>
+                                        </div>
+                                        <div class="shipping-method-price">
+                                            <span class="price">Gratuit</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="shipping-method">
+                                    <input type="radio" name="shipping" id="shipping-express">
+                                    <label for="shipping-express">
+                                        <div class="shipping-method-info">
+                                            <h3>Livraison express</h3>
+                                            <p>2-3 jours ouvrés</p>
+                                        </div>
+                                        <div class="shipping-method-price">
+                                            <span class="price">9,99 €</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="shipping-method">
+                                    <input type="radio" name="shipping" id="shipping-pickup">
+                                    <label for="shipping-pickup">
+                                        <div class="shipping-method-info">
+                                            <h3>Retrait en magasin</h3>
+                                            <p>Dès demain</p>
+                                        </div>
+                                        <div class="shipping-method-price">
+                                            <span class="price">Gratuit</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="checkout-section">
+                            <h2><i class="fas fa-credit-card"></i> Méthode de paiement</h2>
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <input type="radio" name="payment" id="payment-card" checked>
+                                    <label for="payment-card">
+                                        <div class="payment-method-info">
+                                            <h3>Carte bancaire</h3>
+                                            <p>Paiement sécurisé SSL</p>
+                                        </div>
+                                        <div class="payment-method-icons">
+                                            <i class="fab fa-cc-visa"></i>
+                                            <i class="fab fa-cc-mastercard"></i>
+                                            <i class="fab fa-cc-amex"></i>
+                                        </div>
+                                    </label>
+                                    <div class="payment-form" id="card-form">
+                                        <div class="form-grid">
+                                            <div class="form-group">
+                                                <label for="card-number">Numéro de carte *</label>
+                                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="card-name">Nom sur la carte *</label>
+                                                <input type="text" id="card-name" placeholder="JOHN DOE">
+                                            </div>
+                                        </div>
+                                        <div class="form-grid">
+                                            <div class="form-group">
+                                                <label for="card-expiry">Date d'expiration *</label>
+                                                <input type="text" id="card-expiry" placeholder="MM/AA">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="card-cvc">CVC *</label>
+                                                <input type="text" id="card-cvc" placeholder="123">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-method">
+                                    <input type="radio" name="payment" id="payment-paypal">
+                                    <label for="payment-paypal">
+                                        <div class="payment-method-info">
+                                            <h3>PayPal</h3>
+                                            <p>Paiement rapide et sécurisé</p>
+                                        </div>
+                                        <div class="payment-method-icons">
+                                            <i class="fab fa-cc-paypal"></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-method">
+                                    <input type="radio" name="payment" id="payment-applepay">
+                                    <label for="payment-applepay">
+                                        <div class="payment-method-info">
+                                            <h3>Apple Pay</h3>
+                                            <p>Paiement avec Apple Pay</p>
+                                        </div>
+                                        <div class="payment-method-icons">
+                                            <i class="fab fa-cc-apple-pay"></i>
+                                        </div>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-method">
+                                    <input type="radio" name="payment" id="payment-transfer">
+                                    <label for="payment-transfer">
+                                        <div class="payment-method-info">
+                                            <h3>Virement bancaire</h3>
+                                            <p>Paiement par virement</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Notes -->
+                        <div class="checkout-section">
+                            <h2><i class="fas fa-sticky-note"></i> Notes de commande (optionnel)</h2>
+                            <div class="form-group">
+                                <label for="order-notes">Des instructions spéciales pour cette commande ?</label>
+                                <textarea id="order-notes" rows="4" placeholder="Ex : Livrer après 18h, déposer le colis dans le garage..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Order Summary -->
+                    <aside class="order-summary">
+                        <div class="summary-card">
+                            <h3>Votre commande</h3>
+                            
+                            <!-- Order Items -->
+                            <div class="order-items" id="order-items">
+                                <!-- Articles chargés dynamiquement -->
+                            </div>
+                            
+                            <!-- Order Totals -->
+                            <div class="order-totals">
+                                <div class="total-row">
+                                    <span>Sous-total</span>
+                                    <span id="order-subtotal">0,00 €</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>Livraison</span>
+                                    <span id="order-shipping">Gratuit</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>Remise</span>
+                                    <span id="order-discount">-0,00 €</span>
+                                </div>
+                                <div class="total-row grand-total">
+                                    <span>Total</span>
+                                    <span id="order-total">0,00 €</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Applied Coupon -->
+                            <div class="applied-coupon" id="applied-coupon" style="display: none;">
+                                <p>Code appliqué : <strong id="coupon-code-display"></strong></p>
+                                <button id="remove-coupon" class="btn-text">Supprimer</button>
+                            </div>
+                            
+                            <!-- Coupon Code -->
+                            <div class="coupon-code">
+                                <input type="text" id="order-coupon" placeholder="Code promo">
+                                <button id="apply-order-coupon" class="btn btn-small">Appliquer</button>
+                            </div>
+                            
+                            <!-- Terms and Conditions -->
+                            <div class="terms">
+                                <div class="form-check">
+                                    <input type="checkbox" id="terms" required>
+                                    <label for="terms">
+                                        J'accepte les <a href="terms.html">conditions générales de vente</a> et la <a href="privacy.html">politique de confidentialité</a> *
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" id="newsletter">
+                                    <label for="newsletter">
+                                        Je souhaite m'abonner à la newsletter pour recevoir des offres spéciales
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Place Order Button -->
+                            <button type="button" id="place-order" class="btn btn-primary btn-block btn-large">
+                                <i class="fas fa-lock"></i>
+                                Confirmer la commande
+                            </button>
+                            
+                            <!-- Security Info -->
+                            <div class="security-info">
+                                <p><i class="fas fa-shield-alt"></i> Paiement 100% sécurisé</p>
+                                <p><i class="fas fa-lock"></i> Données cryptées SSL</p>
+                                <p><i class="fas fa-undo"></i> Retours gratuits sous 30 jours</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Need Help -->
+                        <div class="help-box">
+                            <h4><i class="fas fa-question-circle"></i> Besoin d'aide ?</h4>
+                            <p>Notre équipe est disponible du lundi au vendredi de 9h à 18h.</p>
+                            <p><strong>Téléphone :</strong> 01 23 45 67 89</p>
+                            <p><strong>Email :</strong> support@eshop.com</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Restez informés</h3>
+                    <p>Inscrivez-vous à notre newsletter pour recevoir nos offres exclusives</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn btn-primary">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="logo">
+                        <h2>E-Shop<span>.</span></h2>
+                    </div>
+                    <p class="footer-description">
+                        Votre boutique en ligne préférée pour tous vos achats. Qualité, prix et service garantis.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="products.html">Boutique</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div class="footer-col">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="products.html?category=electronique">Électronique</a></li>
+                        <li><a href="products.html?category=mode">Mode</a></li>
+                        <li><a href="products.html?category=maison">Maison</a></li>
+                        <li><a href="products.html?category=sport">Sport</a></li>
+                        <li><a href="products.html?category=beaute">Beauté</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Rue du Commerce, 75000 Paris</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>01 23 45 67 89</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@eshop.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 E-Shop. Tous droits réservés.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de confirmation -->
+    <div class="modal" id="confirmation-modal" style="display: none;">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeConfirmationModal()">×</button>
+            <div class="confirmation-content">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Commande confirmée !</h2>
+                <p class="confirmation-number">Votre numéro de commande : <strong>ESHOP-2024-00123</strong></p>
+                <p>Nous avons envoyé un email de confirmation à <strong id="confirmation-email">client@example.com</strong></p>
+                
+                <div class="confirmation-details">
+                    <div class="confirmation-row">
+                        <span>Date de livraison estimée :</span>
+                        <strong>15 janvier 2024</strong>
+                    </div>
+                    <div class="confirmation-row">
+                        <span>Méthode de livraison :</span>
+                        <strong>Livraison standard</strong>
+                    </div>
+                    <div class="confirmation-row">
+                        <span>Montant total :</span>
+                        <strong id="confirmation-total">0,00 €</strong>
+                    </div>
+                </div>
+                
+                <div class="confirmation-actions">
+                    <a href="index.html" class="btn btn-outline">Retour à l'accueil</a>
+                    <a href="orders.html" class="btn btn-primary">Suivre ma commande</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+    
+    <script>
+        // Script d'initialisation checkout
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialiser la page checkout
+            if (window.initCheckoutPage) {
+                window.initCheckoutPage();
+            }
+            
+            // Gestion des options d'authentification
+            const authOptions = document.querySelectorAll('input[name="auth"]');
+            const loginForm = document.getElementById('login-form');
+            
+            authOptions.forEach(option => {
+                option.addEventListener('change', function() {
+                    if (this.id === 'login-checkout') {
+                        loginForm.style.display = 'block';
+                    } else {
+                        loginForm.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Adresse de facturation
+            const sameAsShipping = document.getElementById('same-as-shipping');
+            const billingForm = document.getElementById('billing-address-form');
+            
+            if (sameAsShipping && billingForm) {
+                sameAsShipping.addEventListener('change', function() {
+                    billingForm.style.display = this.checked ? 'none' : 'block';
+                    
+                    // Remplir automatiquement si cochée
+                    if (this.checked && window.copyShippingToBilling) {
+                        window.copyShippingToBilling();
+                    }
+                });
+            }
+            
+            // Formulaires de paiement
+            const paymentMethods = document.querySelectorAll('input[name="payment"]');
+            const cardForm = document.getElementById('card-form');
+            
+            paymentMethods.forEach(method => {
+                method.addEventListener('change', function() {
+                    // Afficher/masquer le formulaire de carte
+                    if (this.id === 'payment-card') {
+                        cardForm.style.display = 'block';
+                    } else {
+                        cardForm.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Validation carte de crédit
+            const cardNumber = document.getElementById('card-number');
+            const cardExpiry = document.getElementById('card-expiry');
+            const cardCvc = document.getElementById('card-cvc');
+            
+            if (cardNumber) {
+                cardNumber.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+                    e.target.value = value.substring(0, 19);
+                });
+            }
+            
+            if (cardExpiry) {
+                cardExpiry.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length >= 2) {
+                        value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                    }
+                    e.target.value = value.substring(0, 5);
+                });
+            }
+            
+            if (cardCvc) {
+                cardCvc.addEventListener('input', function(e) {
+                    e.target.value = e.target.value.replace(/\D/g, '').substring(0, 3);
+                });
+            }
+            
+            // Passer la commande
+            const placeOrderBtn = document.getElementById('place-order');
+            if (placeOrderBtn) {
+                placeOrderBtn.addEventListener('click', function() {
+                    if (window.validateAndPlaceOrder) {
+                        window.validateAndPlaceOrder();
+                    }
+                });
+            }
+            
+            // Coupon code
+            const applyCouponBtn = document.getElementById('apply-order-coupon');
+            const orderCouponInput = document.getElementById('order-coupon');
+            
+            if (applyCouponBtn && orderCouponInput) {
+                applyCouponBtn.addEventListener('click', function() {
+                    const code = orderCouponInput.value.trim();
+                    if (code && window.applyCheckoutCoupon) {
+                        window.applyCheckoutCoupon(code);
+                    }
+                });
+                
+                orderCouponInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        const code = this.value.trim();
+                        if (code && window.applyCheckoutCoupon) {
+                            window.applyCheckoutCoupon(code);
+                        }
+                    }
+                });
+            }
+            
+            // Retirer coupon
+            const removeCouponBtn = document.getElementById('remove-coupon');
+            if (removeCouponBtn) {
+                removeCouponBtn.addEventListener('click', function() {
+                    if (window.removeCheckoutCoupon) {
+                        window.removeCheckoutCoupon();
+                    }
+                });
+            }
+        });
+        
+        // Fonction pour fermer la modal
+        function closeConfirmationModal() {
+            const modal = document.getElementById('confirmation-modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
