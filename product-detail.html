@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail Produit | E-Commerce</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>E-Shop<span>.</span></h1>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form id="search-form">
+                        <input type="text" id="search-input" placeholder="Rechercher un produit...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <!-- Wishlist -->
+                    <a href="wishlist.html" class="action-btn">
+                        <i class="far fa-heart"></i>
+                        <span class="action-count wishlist-count">0</span>
+                    </a>
+                    
+                    <!-- Cart -->
+                    <div class="cart-dropdown">
+                        <a href="cart.html" class="action-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="action-count cart-count">0</span>
+                        </a>
+                        <div class="cart-dropdown-content" id="cart-dropdown-content">
+                            <!-- Panier dynamique -->
+                        </div>
+                    </div>
+                    
+                    <!-- User Account -->
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <i class="far fa-user"></i>
+                        </button>
+                        <div class="user-dropdown-content">
+                            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+                            <a href="register.html"><i class="fas fa-user-plus"></i> Inscription</a>
+                            <a href="profile.html"><i class="fas fa-user-circle"></i> Mon compte</a>
+                            <a href="orders.html"><i class="fas fa-box"></i> Mes commandes</a>
+                            <hr>
+                            <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="has-dropdown">
+                        <a href="products.html">Boutique <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-col">
+                                        <h4>Catégories</h4>
+                                        <ul>
+                                            <li><a href="products.html?category=electronique">Électronique</a></li>
+                                            <li><a href="products.html?category=mode">Mode & Vêtements</a></li>
+                                            <li><a href="products.html?category=maison">Maison & Jardin</a></li>
+                                            <li><a href="products.html?category=sport">Sport & Loisirs</a></li>
+                                            <li><a href="products.html?category=beaute">Beauté & Santé</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-col">
+                                        <h4>Collections</h4>
+                                        <ul>
+                                            <li><a href="products.html?collection=nouveautes">Nouveautés</a></li>
+                                            <li><a href="products.html?collection=best-sellers">Meilleures ventes</a></li>
+                                            <li><a href="products.html?collection=promotions">Promotions</a></li>
+                                            <li><a href="products.html?collection=exclusivites">Exclusivités</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-col">
+                                        <h4>Marques Populaires</h4>
+                                        <ul>
+                                            <li><a href="products.html?brand=apple">Apple</a></li>
+                                            <li><a href="products.html?brand=samsung">Samsung</a></li>
+                                            <li><a href="products.html?brand=nike">Nike</a></li>
+                                            <li><a href="products.html?brand=sony">Sony</a></li>
+                                            <li><a href="products.html?brand=canon">Canon</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-col promo">
+                                        <h4>Promotion spéciale</h4>
+                                        <p>Jusqu'à -50% sur la collection d'été</p>
+                                        <a href="products.html?promo=ete" class="btn btn-outline">Voir les offres</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="products.html">Boutique</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#" id="product-category-link">Catégorie</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li id="product-title">Produit</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="product-detail-page">
+                <!-- Product Main Info -->
+                <div class="product-main">
+                    <!-- Product Gallery -->
+                    <div class="product-gallery">
+                        <!-- Main Image -->
+                        <div class="main-image">
+                            <a href="images/products/iphone15-pro-1.jpg" data-lightbox="product-gallery" id="main-image-link">
+                                <img src="images/products/iphone15-pro-1.jpg" alt="iPhone 15 Pro" id="main-image">
+                            </a>
+                            <span class="badge discount" id="discount-badge">-10%</span>
+                            <span class="badge new" id="new-badge">Nouveau</span>
+                        </div>
+                        
+                        <!-- Thumbnails -->
+                        <div class="thumbnails" id="product-thumbnails">
+                            <div class="thumbnail active">
+                                <img src="images/products/iphone15-pro-1.jpg" alt="Vue 1">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="images/products/iphone15-pro-2.jpg" alt="Vue 2">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="images/products/iphone15-pro-3.jpg" alt="Vue 3">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="images/products/iphone15-pro-4.jpg" alt="Vue 4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="product-info">
+                        <!-- Product Header -->
+                        <div class="product-header">
+                            <span class="product-category" id="product-category">Smartphones</span>
+                            <h1 class="product-title" id="product-name">iPhone 15 Pro</h1>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-value" id="product-rating">4.8</span>
+                                    <span class="reviews-count" id="product-reviews">(128 avis)</span>
+                                    <a href="#reviews" class="write-review">Écrire un avis</a>
+                                </div>
+                                <div class="product-sku">
+                                    <span>Référence :</span>
+                                    <strong id="product-sku">IP15PRO-256</strong>
+                                </div>
+                                <div class="product-availability">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span id="product-stock">En stock (50 unités)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Price -->
+                        <div class="product-price-section">
+                            <div class="price-container">
+                                <span class="current-price" id="current-price">1 079,99 €</span>
+                                <span class="old-price" id="old-price">1 199,99 €</span>
+                                <span class="discount-percent" id="discount-percent">-10%</span>
+                            </div>
+                            <div class="price-note">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Dont 0,23 € d'éco-participation</span>
+                            </div>
+                        </div>
+
+                        <!-- Product Description Short -->
+                        <div class="product-description-short">
+                            <p id="product-short-description">Dernier smartphone Apple avec écran Dynamic Island, processeur A17 Pro et appareil photo 48MP. Design en titane et fonction Action Button.</p>
+                        </div>
+
+                        <!-- Product Variants -->
+                        <div class="product-variants">
+                            <!-- Color Variant -->
+                            <div class="variant-section">
+                                <h4>Couleur : <span id="selected-color">Titane Naturel</span></h4>
+                                <div class="color-options">
+                                    <div class="color-option active" data-color="Titane Naturel" data-sku="IP15PRO-256-NAT">
+                                        <span class="color-preview" style="background-color: #8A7F72;"></span>
+                                        <span class="color-label">Titane Naturel</span>
+                                    </div>
+                                    <div class="color-option" data-color="Titane Bleu" data-sku="IP15PRO-256-BLU">
+                                        <span class="color-preview" style="background-color: #4A6FA5;"></span>
+                                        <span class="color-label">Titane Bleu</span>
+                                    </div>
+                                    <div class="color-option" data-color="Titane Blanc" data-sku="IP15PRO-256-WHT">
+                                        <span class="color-preview" style="background-color: #F0F0F0;"></span>
+                                        <span class="color-label">Titane Blanc</span>
+                                    </div>
+                                    <div class="color-option" data-color="Titane Noir" data-sku="IP15PRO-256-BLK">
+                                        <span class="color-preview" style="background-color: #1A1A1A;"></span>
+                                        <span class="color-label">Titane Noir</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Storage Variant -->
+                            <div class="variant-section">
+                                <h4>Capacité : <span id="selected-storage">256 Go</span></h4>
+                                <div class="storage-options">
+                                    <div class="storage-option active" data-storage="256" data-price="1079.99">
+                                        <span class="storage-label">256 Go</span>
+                                        <span class="storage-price">1 079,99 €</span>
+                                    </div>
+                                    <div class="storage-option" data-storage="512" data-price="1279.99">
+                                        <span class="storage-label">512 Go</span>
+                                        <span class="storage-price">1 279,99 €</span>
+                                        <span class="storage-save">Économisez 20 €</span>
+                                    </div>
+                                    <div class="storage-option" data-storage="1024" data-price="1479.99">
+                                        <span class="storage-label">1 To</span>
+                                        <span class="storage-price">1 479,99 €</span>
+                                        <span class="storage-save">Économisez 40 €</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quantity and Add to Cart -->
+                        <div class="product-actions">
+                            <div class="quantity-section">
+                                <label for="quantity">Quantité :</label>
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn minus" id="quantity-minus">-</button>
+                                    <input type="number" id="quantity" value="1" min="1" max="10">
+                                    <button class="quantity-btn plus" id="quantity-plus">+</button>
+                                </div>
+                                <div class="stock-info">
+                                    <i class="fas fa-box"></i>
+                                    <span id="remaining-stock">Il reste 50 produits en stock</span>
+                                </div>
+                            </div>
+
+                            <div class="action-buttons">
+                                <button class="btn btn-primary btn-add-to-cart" id="add-to-cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Ajouter au panier
+                                </button>
+                                <button class="btn btn-outline btn-wishlist" id="add-to-wishlist">
+                                    <i class="far fa-heart"></i>
+                                    Favoris
+                                </button>
+                                <button class="btn btn-outline btn-compare" id="add-to-compare">
+                                    <i class="fas fa-exchange-alt"></i>
+                                    Comparer
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Features -->
+                        <div class="product-features">
+                            <div class="feature">
+                                <i class="fas fa-shipping-fast"></i>
+                                <div>
+                                    <h5>Livraison gratuite</h5>
+                                    <p>Dès 50€ d'achat</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-undo"></i>
+                                <div>
+                                    <h5>Retours gratuits</h5>
+                                    <p>Sous 30 jours</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h5>Garantie 2 ans</h5>
+                                    <p>Constructeur</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-credit-card"></i>
+                                <div>
+                                    <h5>Paiement sécurisé</h5>
+                                    <p>3x sans frais</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Share -->
+                        <div class="product-share">
+                            <span>Partager :</span>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="share-btn pinterest"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="#" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="share-btn email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Tabs -->
+                <div class="product-tabs">
+                    <nav class="tabs-nav">
+                        <button class="tab-btn active" data-tab="description">Description</button>
+                        <button class="tab-btn" data-tab="specifications">Spécifications</button>
+                        <button class="tab-btn" data-tab="reviews">Avis (128)</button>
+                        <button class="tab-btn" data-tab="shipping">Livraison</button>
+                        <button class="tab-btn" data-tab="faq">FAQ</button>
+                    </nav>
+
+                    <div class="tabs-content">
+                        <!-- Description Tab -->
+                        <div class="tab-pane active" id="description">
+                            <div class="tab-content-inner">
+                                <h2>iPhone 15 Pro - L'innovation à son apogée</h2>
+                                <p>L'iPhone 15 Pro représente l'excellence technologique d'Apple avec des fonctionnalités révolutionnaires et un design premium en titane.</p>
+                                
+                                <div class="description-section">
+                                    <h3><i class="fas fa-camera"></i> Système photo professionnel</h3>
+                                    <p>Capteur principal 48MP avec stabilisation optique de l'image, téléobjectif 12MP avec zoom 3x et ultra-grand-angle 12MP. Idéal pour la photographie créative et les vidéos cinématographiques.</p>
+                                    <ul>
+                                        <li>Mode Portrait avec contrôle avancé de la profondeur de champ</li>
+                                        <li>Vidéo 4K à 60 fps avec Dolby Vision HDR</li>
+                                        <li>Mode Action pour des vidéos stables en mouvement</li>
+                                        <li>Photonic Engine pour des photos plus lumineuses</li>
+                                    </ul>
+                                </div>
+
+                                <div class="description-section">
+                                    <h3><i class="fas fa-microchip"></i> Puissance extrême</h3>
+                                    <p>Équipé de la puce A17 Pro, la plus rapide jamais intégrée dans un smartphone, offrant des performances exceptionnelles pour le gaming, la réalité augmentée et les applications professionnelles.</p>
+                                </div>
+
+                                <div class="description-section">
+                                    <h3><i class="fas fa-expand-alt"></i> Écran Dynamic Island</h3>
+                                    <p>Écran Super Retina XDR de 6,7 pouces avec Dynamic Island, une innovation qui transforme la forme de la caméra TrueDepth en une expérience interactive unique.</p>
+                                </div>
+
+                                <div class="description-section">
+                                    <h3><i class="fas fa-bolt"></i> Action Button</h3>
+                                    <p>Un bouton d'action personnalisable qui remplace le sélecteur sonore, permettant d'accéder rapidement à vos fonctions favorites comme le mode silencieux, l'appareil photo ou le dictaphone.</p>
+                                </div>
+
+                                <div class="description-gallery">
+                                    <div class="gallery-item">
+                                        <img src="images/products/iphone15-pro-detail1.jpg" alt="Design titane">
+                                        <p>Design premium en titane aérospatial</p>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="images/products/iphone15-pro-detail2.jpg" alt="Camera system">
+                                        <p>Système photo avancé</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Specifications Tab -->
+                        <div class="tab-pane" id="specifications">
+                            <div class="tab-content-inner">
+                                <h2>Caractéristiques techniques</h2>
+                                
+                                <div class="specs-table">
+                                    <div class="specs-group">
+                                        <h3><i class="fas fa-mobile-alt"></i> Général</h3>
+                                        <table>
+                                            <tr>
+                                                <td>Modèle</td>
+                                                <td>iPhone 15 Pro</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dimensions</td>
+                                                <td>146,6 x 70,6 x 8,25 mm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Poids</td>
+                                                <td>187 g</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Matériau</td>
+                                                <td>Titane de qualité aérospatiale</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Résistance</td>
+                                                <td>IP68 (eau jusqu'à 6m pendant 30min)</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="specs-group">
+                                        <h3><i class="fas fa-desktop"></i> Écran</h3>
+                                        <table>
+                                            <tr>
+                                                <td>Taille</td>
+                                                <td>6,7 pouces</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Technologie</td>
+                                                <td>Super Retina XDR OLED</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Résolution</td>
+                                                <td>2796 x 1290 pixels</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Densité</td>
+                                                <td>460 ppp</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Luminosité</td>
+                                                <td>2000 nits (pic)</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="specs-group">
+                                        <h3><i class="fas fa-microchip"></i> Performances</h3>
+                                        <table>
+                                            <tr>
+                                                <td>Processeur</td>
+                                                <td>A17 Pro 6 cœurs</td>
+                                            </tr>
+                                            <tr>
+                                                <td>GPU</td>
+                                                <td>6 cœurs</td>
+                                            </tr>
+                                            <tr>
+                                                <td>RAM</td>
+                                                <td>8 Go</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Stockage</td>
+                                                <td>256 Go / 512 Go / 1 To</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Système</td>
+                                                <td>iOS 17</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="specs-group">
+                                        <h3><i class="fas fa-camera"></i> Appareil photo</h3>
+                                        <table>
+                                            <tr>
+                                                <td>Capteur principal</td>
+                                                <td>48 MP, f/1.78</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ultra grand-angle</td>
+                                                <td>12 MP, f/2.2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Téléobjectif</td>
+                                                <td>12 MP, f/2.8, zoom 3x</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Caméra avant</td>
+                                                <td>12 MP, f/1.9</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vidéo</td>
+                                                <td>4K à 60 fps, Dolby Vision</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="specs-group">
+                                        <h3><i class="fas fa-battery-full"></i> Batterie</h3>
+                                        <table>
+                                            <tr>
+                                                <td>Capacité</td>
+                                                <td>4352 mAh</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Autonomie</td>
+                                                <td>Jusqu'à 29h d'appels</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Chargement</td>
+                                                <td>USB-C, 20W</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sans fil</td>
+                                                <td>MagSafe, Qi2</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="specs-group">
+                                        <h3><i class="fas fa-wifi"></i> Connectivité</h3>
+                                        <table>
+                                            <tr>
+                                                <td>5G</td>
+                                                <td>Oui</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wi-Fi</td>
+                                                <td>Wi-Fi 6E</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bluetooth</td>
+                                                <td>5.3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Port</td>
+                                                <td>USB-C 3.2 (10 Gb/s)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Positionnement</td>
+                                                <td>GPS, Galileo, GLONASS</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reviews Tab -->
+                        <div class="tab-pane" id="reviews">
+                            <div class="tab-content-inner">
+                                <div class="reviews-header">
+                                    <div class="reviews-summary">
+                                        <div class="average-rating">
+                                            <h2>4.8</h2>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                            <p>Basé sur 128 avis</p>
+                                        </div>
+                                        <div class="rating-bars">
+                                            <div class="rating-bar">
+                                                <span>5 étoiles</span>
+                                                <div class="bar">
+                                                    <div class="fill" style="width: 85%"></div>
+                                                </div>
+                                                <span>85%</span>
+                                            </div>
+                                            <div class="rating-bar">
+                                                <span>4 étoiles</span>
+                                                <div class="bar">
+                                                    <div class="fill" style="width: 10%"></div>
+                                                </div>
+                                                <span>10%</span>
+                                            </div>
+                                            <div class="rating-bar">
+                                                <span>3 étoiles</span>
+                                                <div class="bar">
+                                                    <div class="fill" style="width: 3%"></div>
+                                                </div>
+                                                <span>3%</span>
+                                            </div>
+                                            <div class="rating-bar">
+                                                <span>2 étoiles</span>
+                                                <div class="bar">
+                                                    <div class="fill" style="width: 1%"></div>
+                                                </div>
+                                                <span>1%</span>
+                                            </div>
+                                            <div class="rating-bar">
+                                                <span>1 étoile</span>
+                                                <div class="bar">
+                                                    <div class="fill" style="width: 1%"></div>
+                                                </div>
+                                                <span>1%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-primary" id="write-review-btn">
+                                        <i class="fas fa-pen"></i>
+                                        Écrire un avis
+                                    </button>
+                                </div>
+
+                                <!-- Review Form (hidden by default) -->
+                                <div class="review-form" id="review-form" style="display: none;">
+                                    <h3>Donnez votre avis</h3>
+                                    <form id="submit-review-form">
+                                        <div class="form-group">
+                                            <label>Votre note *</label>
+                                            <div class="rating-input">
+                                                <i class="far fa-star" data-rating="1"></i>
+                                                <i class="far fa-star" data-rating="2"></i>
+                                                <i class="far fa-star" data-rating="3"></i>
+                                                <i class="far fa-star" data-rating="4"></i>
+                                                <i class="far fa-star" data-rating="5"></i>
+                                            </div>
+                                            <input type="hidden" id="review-rating" value="0">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="review-title">Titre de l'avis *</label>
+                                            <input type="text" id="review-title" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="review-text">Votre avis *</label>
+                                            <textarea id="review-text" rows="5" required></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="review-name">Votre nom *</label>
+                                            <input type="text" id="review-name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="review-email">Votre email *</label>
+                                            <input type="email" id="review-email" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Envoyer l'avis</button>
+                                        <button type="button" class="btn btn-outline" id="cancel-review">Annuler</button>
+                                    </form>
+                                </div>
+
+                                <!-- Reviews List -->
+                                <div class="reviews-list">
+                                    <h3>Avis clients</h3>
+                                    
+                                    <div class="review-sort">
+                                        <span>Trier par :</span>
+                                        <select id="review-sort">
+                                            <option value="newest">Plus récents</option>
+                                            <option value="highest">Note la plus haute</option>
+                                            <option value="lowest">Note la plus basse</option>
+                                            <option value="helpful">Plus utiles</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="review" id="review-1">
+                                        <div class="review-header">
+                                            <div class="reviewer-info">
+                                                <div class="reviewer-name">Marie L.</div>
+                                                <div class="review-date">15 janvier 2024</div>
+                                            </div>
+                                            <div class="review-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="review-title">Exceptionnel !</h4>
+                                        <p class="review-text">J'ai acheté cet iPhone 15 Pro il y a un mois et je suis absolument ravie. La photo est incroyable, la batterie tient toute la journée et le design en titane est magnifique. Le Dynamic Island est très pratique pour suivre mes livraisons Uber.</p>
+                                        <div class="review-helpful">
+                                            <span>Avis utile ?</span>
+                                            <button class="helpful-btn"><i class="fas fa-thumbs-up"></i> Oui (42)</button>
+                                            <button class="helpful-btn"><i class="fas fa-thumbs-down"></i> Non (2)</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="review" id="review-2">
+                                        <div class="review-header">
+                                            <div class="reviewer-info">
+                                                <div class="reviewer-name">Thomas R.</div>
+                                                <div class="review-date">10 janvier 2024</div>
+                                            </div>
+                                            <div class="review-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="review-title">Très bon, mais...</h4>
+                                        <p class="review-text">Excellent téléphone, très rapide et photos superbes. Petit bémol sur la chauffe lors des sessions de gaming prolongées. L'Action Button est une fonctionnalité sympa mais je ne l'utilise pas tant que ça.</p>
+                                        <div class="review-helpful">
+                                            <span>Avis utile ?</span>
+                                            <button class="helpful-btn"><i class="fas fa-thumbs-up"></i> Oui (28)</button>
+                                            <button class="helpful-btn"><i class="fas fa-thumbs-down"></i> Non (5)</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="review" id="review-3">
+                                        <div class="review-header">
+                                            <div class="reviewer-info">
+                                                <div class="reviewer-name">Julie M.</div>
+                                                <div class="review-date">5 janvier 2024</div>
+                                            </div>
+                                            <div class="review-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="review-title">Meilleure mise à jour depuis longtemps</h4>
+                                        <p class="review-text">Je viens de l'iPhone 12 Pro et la différence est énorme. L'écran, les performances, la photo... tout est meilleur. Le port USB-C est enfin là ! La charge est plus rapide et je peux utiliser le même câble que mon MacBook.</p>
+                                        <div class="review-helpful">
+                                            <span>Avis utile ?</span>
+                                            <button class="helpful-btn"><i class="fas fa-thumbs-up"></i> Oui (56)</button>
+                                            <button class="helpful-btn"><i class="fas fa-thumbs-down"></i> Non (1)</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- More reviews would be loaded dynamically -->
+                                    
+                                    <div class="reviews-pagination">
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-chevron-left"></i>
+                                            Précédent
+                                        </button>
+                                        <div class="page-numbers">
+                                            <span class="active">1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                            <span>...</span>
+                                            <span>6</span>
+                                        </div>
+                                        <button class="btn btn-outline">
+                                            Suivant
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Tab -->
+                        <div class="tab-pane" id="shipping">
+                            <div class="tab-content-inner">
+                                <h2>Livraison et retours</h2>
+                                
+                                <div class="shipping-info">
+                                    <div class="info-section">
+                                        <h3><i class="fas fa-truck"></i> Options de livraison</h3>
+                                        <div class="shipping-option">
+                                            <h4>Livraison standard</h4>
+                                            <p><strong>Délai :</strong> 3-5 jours ouvrés</p>
+                                            <p><strong>Prix :</strong> Gratuit à partir de 50€ d'achat, sinon 4,99€</p>
+                                            <p><strong>Suivi :</strong> Numéro de suivi fourni</p>
+                                        </div>
+                                        <div class="shipping-option">
+                                            <h4>Livraison express</h4>
+                                            <p><strong>Délai :</strong> 24-48h</p>
+                                            <p><strong>Prix :</strong> 9,99€</p>
+                                            <p><strong>Suivi :</strong> Suivi en temps réel</p>
+                                        </div>
+                                        <div class="shipping-option">
+                                            <h4>Retrait en magasin</h4>
+                                            <p><strong>Délai :</strong> Dès le lendemain</p>
+                                            <p><strong>Prix :</strong> Gratuit</p>
+                                            <p><strong>Pièce :</strong> Carte d'identité requise</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-section">
+                                        <h3><i class="fas fa-undo"></i> Politique de retours</h3>
+                                        <p>Vous pouvez retourner ce produit sous 30 jours suivant la réception, dans son emballage d'origine et non utilisé.</p>
+                                        <ul>
+                                            <li>Retours gratuits avec étiquette prépayée</li>
+                                            <li>Remboursement sous 14 jours après réception</li>
+                                            <li>Produits défectueux remplacés immédiatement</li>
+                                            <li>Garantie constructeur de 2 ans incluse</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="info-section">
+                                        <h3><i class="fas fa-box"></i> Emballage</h3>
+                                        <p>Le produit est livré dans son emballage d'origine Apple, scellé et protégé. L'emballage comprend :</p>
+                                        <ul>
+                                            <li>iPhone 15 Pro</li>
+                                            <li>Câble USB-C vers USB-C (1m)</li>
+                                            <li>Documentation et autocollants Apple</li>
+                                            <li>Outils d'extraction de carte SIM</li>
+                                            <li>Garantie et notice d'utilisation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Tab -->
+                        <div class="tab-pane" id="faq">
+                            <div class="tab-content-inner">
+                                <h2>Questions fréquentes</h2>
+                                
+                                <div class="faq-section">
+                                    <div class="faq-item">
+                                        <button class="faq-question">
+                                            L'iPhone 15 Pro est-il compatible avec mes accessoires actuels ?
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                        <div class="faq-answer">
+                                            <p>L'iPhone 15 Pro utilise le port USB-C, donc si vous avez des accessoires USB-C (écouteurs, câbles de charge), ils seront compatibles. Pour les accessoires Lightning, vous aurez besoin d'un adaptateur.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="faq-item">
+                                        <button class="faq-question">
+                                            Quelle est la différence avec l'iPhone 15 Pro Max ?
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                        <div class="faq-answer">
+                                            <p>L'iPhone 15 Pro Max a un écran légèrement plus grand (6,9 pouces), une meilleure autonomie et un téléobjectif 5x au lieu de 3x. Pour la plupart des utilisateurs, l'iPhone 15 Pro est suffisant.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="faq-item">
+                                        <button class="faq-question">
+                                            Puis-je charger sans fil ?
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                        <div class="faq-answer">
+                                            <p>Oui, l'iPhone 15 Pro supporte la charge MagSafe (jusqu'à 15W) et la charge Qi standard (jusqu'à 7.5W). Il est également compatible avec la nouvelle norme Qi2.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="faq-item">
+                                        <button class="faq-question">
+                                            Est-il résistant à l'eau ?
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                        <div class="faq-answer">
+                                            <p>Oui, l'iPhone 15 Pro a une certification IP68, ce qui signifie qu'il peut résister à une immersion jusqu'à 6 mètres de profondeur pendant 30 minutes.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="faq-item">
+                                        <button class="faq-question">
+                                            Puis-je l'utiliser avec un plan 5G ?
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                        <div class="faq-answer">
+                                            <p>Oui, l'iPhone 15 Pro est compatible 5G dans le monde entier. Vérifiez avec votre opérateur la disponibilité de la 5G dans votre région.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-contact">
+                                    <h3>Vous avez d'autres questions ?</h3>
+                                    <p>Notre équipe d'experts est là pour vous aider.</p>
+                                    <a href="contact.html" class="btn btn-primary">
+                                        <i class="fas fa-headset"></i>
+                                        Contacter le support
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Products -->
+                <section class="related-products">
+                    <h2>Produits similaires</h2>
+                    <div class="products-grid" id="related-products">
+                        <!-- Produits similaires chargés dynamiquement -->
+                    </div>
+                </section>
+
+                <!-- Recently Viewed -->
+                <section class="recently-viewed-section">
+                    <h2>Récemment consultés</h2>
+                    <div class="products-grid" id="recently-viewed-products">
+                        <!-- Produits récemment consultés -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Restez informés</h3>
+                    <p>Inscrivez-vous à notre newsletter pour recevoir nos offres exclusives</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn btn-primary">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="logo">
+                        <h2>E-Shop<span>.</span></h2>
+                    </div>
+                    <p class="footer-description">
+                        Votre boutique en ligne préférée pour tous vos achats. Qualité, prix et service garantis.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="products.html">Boutique</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div class="footer-col">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="products.html?category=electronique">Électronique</a></li>
+                        <li><a href="products.html?category=mode">Mode</a></li>
+                        <li><a href="products.html?category=maison">Maison</a></li>
+                        <li><a href="products.html?category=sport">Sport</a></li>
+                        <li><a href="products.html?category=beaute">Beauté</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Rue du Commerce, 75000 Paris</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>01 23 45 67 89</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@eshop.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 E-Shop. Tous droits réservés.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/product-detail.js"></script>
+    
+    <script>
+        // Script spécifique à la page détail produit
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialiser la page produit
+            if (window.initProductPage) {
+                window.initProductPage();
+            }
+            
+            // Gestion des onglets
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tabId = this.dataset.tab;
+                    
+                    // Désactiver tous les onglets
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabPanes.forEach(p => p.classList.remove('active'));
+                    
+                    // Activer l'onglet sélectionné
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Gestion des miniatures
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.getElementById('main-image');
+            const mainImageLink = document.getElementById('main-image-link');
+            
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    // Mettre à jour la miniature active
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Mettre à jour l'image principale
+                    const imgSrc = this.querySelector('img').src;
+                    mainImage.src = imgSrc;
+                    mainImageLink.href = imgSrc;
+                });
+            });
+            
+            // Gestion des variantes de couleur
+            const colorOptions = document.querySelectorAll('.color-option');
+            const selectedColorSpan = document.getElementById('selected-color');
+            
+            colorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    colorOptions.forEach(o => o.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const color = this.dataset.color;
+                    selectedColorSpan.textContent = color;
+                    
+                    // Mettre à jour le SKU si nécessaire
+                    if (window.updateProductVariant) {
+                        window.updateProductVariant(this.dataset.sku);
+                    }
+                });
+            });
+            
+            // Gestion des variantes de stockage
+            const storageOptions = document.querySelectorAll('.storage-option');
+            const selectedStorageSpan = document.getElementById('selected-storage');
+            const currentPriceSpan = document.getElementById('current-price');
+            const oldPriceSpan = document.getElementById('old-price');
+            
+            storageOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    storageOptions.forEach(o => o.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const storage = this.dataset.storage;
+                    const price = parseFloat(this.dataset.price);
+                    selectedStorageSpan.textContent = storage + ' Go';
+                    
+                    // Mettre à jour le prix
+                    if (window.updateProductPrice) {
+                        window.updateProductPrice(price);
+                    }
+                });
+            });
+            
+            // Gestion de la quantité
+            const quantityInput = document.getElementById('quantity');
+            const minusBtn = document.getElementById('quantity-minus');
+            const plusBtn = document.getElementById('quantity-plus');
+            
+            minusBtn.addEventListener('click', function() {
+                let value = parseInt(quantityInput.value);
+                if (value > 1) {
+                    quantityInput.value = value - 1;
+                }
+            });
+            
+            plusBtn.addEventListener('click', function() {
+                let value = parseInt(quantityInput.value);
+                if (value < 10) {
+                    quantityInput.value = value + 1;
+                }
+            });
+            
+            quantityInput.addEventListener('change', function() {
+                let value = parseInt(this.value);
+                if (isNaN(value) || value < 1) {
+                    this.value = 1;
+                } else if (value > 10) {
+                    this.value = 10;
+                }
+            });
+            
+            // Gestion des FAQ
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const answer = this.nextElementSibling;
+                    
+                    if (this.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.maxHeight = '0';
+                    }
+                });
+            });
+            
+            // Gestion des avis
+            const writeReviewBtn = document.getElementById('write-review-btn');
+            const reviewForm = document.getElementById('review-form');
+            const cancelReviewBtn = document.getElementById('cancel-review');
+            const ratingStars = document.querySelectorAll('.rating-input i');
+            const ratingInput = document.getElementById('review-rating');
+            
+            if (writeReviewBtn && reviewForm) {
+                writeReviewBtn.addEventListener('click', function() {
+                    reviewForm.style.display = 'block';
+                    window.scrollTo({
+                        top: reviewForm.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                if (cancelReviewBtn) {
+                    cancelReviewBtn.addEventListener('click', function() {
+                        reviewForm.style.display = 'none';
+                    });
+                }
+            }
+            
+            // Évaluation par étoiles
+            if (ratingStars.length > 0) {
+                ratingStars.forEach(star => {
+                    star.addEventListener('mouseover', function() {
+                        const rating = parseInt(this.dataset.rating);
+                        highlightStars(rating);
+                    });
+                    
+                    star.addEventListener('mouseout', function() {
+                        const currentRating = parseInt(ratingInput.value);
+                        highlightStars(currentRating);
+                    });
+                    
+                    star.addEventListener('click', function() {
+                        const rating = parseInt(this.dataset.rating);
+                        ratingInput.value = rating;
+                        highlightStars(rating);
+                    });
+                });
+                
+                function highlightStars(rating) {
+                    ratingStars.forEach(star => {
+                        const starRating = parseInt(star.dataset.rating);
+                        if (starRating <= rating) {
+                            star.classList.remove('far');
+                            star.classList.add('fas');
+                        } else {
+                            star.classList.remove('fas');
+                            star.classList.add('far');
+                        }
+                    });
+                }
+            }
+            
+            // Partage sur les réseaux sociaux
+            const shareButtons = document.querySelectorAll('.share-btn');
+            const productUrl = window.location.href;
+            const productTitle = document.getElementById('product-name').textContent;
+            
+            shareButtons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    let shareUrl = '';
+                    const platform = this.classList[1];
+                    
+                    switch(platform) {
+                        case 'facebook':
+                            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(productUrl)}`;
+                            break;
+                        case 'twitter':
+                            shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(productUrl)}&text=${encodeURIComponent(productTitle)}`;
+                            break;
+                        case 'pinterest':
+                            const imageUrl = mainImage.src;
+                            shareUrl = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(productUrl)}&media=${encodeURIComponent(imageUrl)}&description=${encodeURIComponent(productTitle)}`;
+                            break;
+                        case 'whatsapp':
+                            shareUrl = `https://wa.me/?text=${encodeURIComponent(productTitle + ' ' + productUrl)}`;
+                            break;
+                        case 'email':
+                            shareUrl = `mailto:?subject=${encodeURIComponent(productTitle)}&body=${encodeURIComponent(productUrl)}`;
+                            break;
+                    }
+                    
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
